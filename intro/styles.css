@@ -1,0 +1,62 @@
+/* 
+h1{
+    color: yellow;
+} */
+/* -------------------------------------------------- */
+/* #titulo{
+    color: yellow;
+}
+
+p{
+    color: blue;
+} */
+
+/* Não importa a ordem, a mudança ocorre pela especificidade. O mais especifico prevalece (passa o mause em cima do p#descricao e do p, espera um pouco.). */
+
+/* p#descricao{
+    text-align: center;
+    color: red;
+} */
+
+/* Usa # para id, e usa . para class. */
+
+/* .promocao{
+    text-align: center;
+    background-color: azure;
+} */
+
+/* Tipo (ex: h1 ou p) ganha (0,0,1)[1] ponto de especificação, classe ganha (0,1,0)[10] ponto de especificação, id ganha (1,0,0)[100] ponto de especificação. */
+/* 
+p.promocao{
+    background-color: blanchedalmond;
+} */
+
+/* Pode usar: p.promocao.nova -> pode usar mais de uma classe, por ter mais de uma classe ganha mais ponto de especificidade. */
+/* .nova{
+    color: red;
+}
+
+p#rodape.final-pagina{
+    background-color: #CCC;
+    text-align: center;
+}
+
+
+strong{
+    color: blueviolet;
+}
+
+ */
+/* -------------------------------------------------- */
+
+/* Se ele é novo-curso ou curso, aplica a regra. Para selecionar varias classes, ids e tipos, basta usar ','. */
+.novo-curso, .curso, #contato{
+    background-color: aliceblue;
+}/* ',' servo como 'ou'  */
+
+.novo-curso{
+    color: red;
+}
+
+
+

@@ -1,0 +1,75 @@
+<!-- Usando estensão do visual: Live Server -->
+<html>
+    <head>
+        <title>Seletores descentralizados</title>
+        <!-- <style>
+            article p{
+                color: blue;
+                background-color: #CCC;
+            }
+            p{
+                color: red;
+            }
+            .coordenadores{
+                background-color: whitesmoke;
+            }
+            /* Valido, e se passar o mouse por cima ele explica. 'P' descendente de um 'P', descendente de um 'P'.*/
+            p p p{
+                color: black;
+            }
+            /* Válido,  vai pegar um "outroid", dentro de um 'p' com classe 'promocao', dentro de um id 'principal'*/
+            #principal p.promocao #outroid{
+                color: black;
+            }
+        </style> -->
+        <!-- ---------------------------------------------------------------------- -->
+        <style>
+            main p{
+                color: red;
+            }
+
+            /* Filho direto, se não for não aplica. */
+            main > p{
+                background-color: #CCC;
+            }
+
+            /* '>' não aumenta a pontuação da especificação. Fica mais fácil de ler da direita para a esquerda: todo 'p' de classe 'coordenador', que é filho direto de 'section', que é descendente de 'article', que é filho direto de 'main'. */
+            main > article section > p.coordenadores{
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!-- <main>
+            <h1 id="titulo">Lorem ipsum dolor sit amet.</h1>
+
+            <p id="descricao">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, numquam!</p>
+
+            <p class="promocao nova">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis aspernatur consequatur incidunt in quos provident enim saepe at dicta adipisci!</p>
+
+            <p>Cursos:</p>
+            <article>
+                <p class="novo-curso">Medicina</p>
+                <p class="curso">Engenharia de Computação</p>
+                <p class="curso">Fearmácia</p>
+                <section>
+                    <p class="coordenadores">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, ea?
+                    </p>
+                </section>
+            </article>
+        </main> -->
+        <!-- -------------------------------------------------------------------------- -->
+
+        <main>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates atque iure vitae perferendis repudiandae dolore debitis amet repellat odit illum dignissimos, in, minus velit, reiciendis distinctio eveniet voluptatem quibusdam deserunt.</p>
+
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, adipisci.
+                </p>
+            </article>
+
+        </main>
+    </body>
+</html>
